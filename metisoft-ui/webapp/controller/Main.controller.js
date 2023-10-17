@@ -9,9 +9,10 @@ sap.ui.define([
 
         return Controller.extend("com.meti.metisoftui.controller.Main", {
             onInit: function () {
-
+                this.oModel = this.getOwnerComponent().getModel();
             },
             onClick: function(){
+                var that = this;
                 var myPayload = {
                     "CtLibri":[{
                         "item":{
@@ -40,7 +41,7 @@ sap.ui.define([
                     data : JSON.stringify(myPayload),
                     success: function(data)
                     {
-                        debugger;
+                        that.oModel.setProperty("/item",data["n0:ZBcSonialibriRfcResponse"].CtLibri.item);
                     },
                     error: function(err, status){
                         debugger;

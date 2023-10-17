@@ -4,6 +4,11 @@
     <Page id="page" title="{i18n>title}">
         <content>
             <Button press="onClick" text="launch" />
+            <List items="{/item}">
+                <ObjectListItem title="{CodLibro} {Title}"
+                    intro="{Autore}" number="{CasaEdi}" numberUnit="{LettoSi}" icon="sap-icon://product"
+                ></ObjectListItem>
+            </List>
         </content>
     </Page>
 </mvc:View>
