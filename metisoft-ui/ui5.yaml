@@ -17,8 +17,7 @@ server:
           url: https://ui5.sap.com
         backend:
           - path: /http
-            url: https://050e2824trial.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com
-            destination: IntegrationSuiteDestination
+            url: https://IntegrationSuiteDestination.dest
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:
